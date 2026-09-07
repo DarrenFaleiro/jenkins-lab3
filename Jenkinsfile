@@ -56,7 +56,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Getting the project'
+                echo 'Getting project'
                 sh 'rm -rf dockerfileexercise'
                 sh 'git clone https://gitlab.com/Reece-Elder/dockerfileexercise.git'
             }
@@ -65,7 +65,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 echo 'Building Docker image'
-                sh 'cd dockerfileexercise && docker build -t myapp .'
+                sh 'cd dockerfileexercise/Task1 && docker build -t myapp .'
             }
         }
 
@@ -79,3 +79,4 @@ pipeline {
         }
     }
 }
+
