@@ -7,33 +7,30 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Starting Build stage...'
-                pwd
-                sh 'ls -la'
+                echo 'Build'
+                sh 'pwd'
+                sh 'ls'
                 sh 'touch build.txt'
-                echo 'Build completed.'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Starting Test stage...'
-                sh 'ls -la'
-                echo 'Running tests...'
-                echo 'Tests passed.'
+                echo 'Test'
+                sh 'ls'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Starting Deploy stage...'
+                echo 'Deploy'
                 sh 'touch deploy.txt'
                 sh 'mv deploy.txt build.txt'
-                sh 'ls -la'
-                echo 'Deployment completed.'
+                sh 'ls'
             }
         }
     }
+}
 
     post {
         success {
