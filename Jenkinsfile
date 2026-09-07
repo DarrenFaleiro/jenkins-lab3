@@ -59,6 +59,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Getting the project'
+                sh 'rm -rf dockerfileexercise'
                 sh 'git clone https://gitlab.com/Reece-Elder/dockerfileexercise.git'
             }
         }
