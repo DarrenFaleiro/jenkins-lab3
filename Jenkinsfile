@@ -50,9 +50,7 @@
 
 
 pipeline {
-    agent {
-        label 'worker'
-    }
+    agent any
 
     stages {
 
