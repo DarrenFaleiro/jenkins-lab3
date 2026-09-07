@@ -74,7 +74,7 @@ pipeline {
                 echo 'Deploying application'
                 sh 'docker stop myapp || true'
                 sh 'docker rm myapp || true'
-                sh 'docker run -d --name myapp -p 8080:80 myapp'
+                sh 'docker run -d --name myapp -p 8080:5500 myapp'
             }
         }
     }
